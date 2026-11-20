@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin"><title>모두의 할인 주변 지도</title>
+<style>
+html,body,#map{width:100%;height:100%;margin:0;background:#eef4f1}
+button{position:relative;display:grid;place-items:center;width:40px;height:40px;padding:0;border:3px solid white;border-radius:50% 50% 50% 8px;background:#087f6b;color:white;box-shadow:0 2px 6px #0003;cursor:pointer;font-size:0;transform:rotate(-45deg)}
+button::before{content:'';width:22px;height:22px;transform:rotate(45deg);background:center/contain no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 10v10h16V10M3 10l2-6h14l2 6M3 10c0 3 4 3 4 0 0 3 5 3 5 0 0 3 5 3 5 0 0 3 4 3 4 0M9 4l-2 6m8-6 2 6M10 20v-6h4v6'/%3E%3C/svg%3E")}
+button[aria-pressed=true]{background:#065b4d;box-shadow:0 0 0 4px #20d3a344,0 2px 6px #0003}
+button[aria-pressed=true]::after{content:attr(data-brand);position:absolute;bottom:44px;left:50%;transform:rotate(45deg);transform-origin:0 100%;white-space:nowrap;font:700 12px system-ui;padding:5px 9px;background:white;color:#087f6b;border:1px solid #087f6b;border-radius:8px}
+button:focus-visible{outline:3px solid #181a1d;outline-offset:3px}
+.current-location{width:14px;height:14px;border:3px solid white;border-radius:50%;background:#2589ff;box-shadow:0 0 0 10px #2589ff22;pointer-events:none}
+</style>
+</head><body><div id="map" aria-label="주변 매장 지도"></div><script src="./nearby-map.js"></script></body></html>
